@@ -17,6 +17,8 @@ export const createOrder = (reqData) => {
                 window.location.href = data.payment_url;
             } else if (data.paypal_url) {
                 window.location.href = data.paypal_url;
+            } else if (data.payUrl) {
+                window.location.href = data.payUrl;
             } else {
                 console.log("No payment URL returned from backend", data);
             }
